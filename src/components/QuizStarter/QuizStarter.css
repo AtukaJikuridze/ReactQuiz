@@ -1,0 +1,30 @@
+.quiz-starter-box {
+  width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.quiz-starter-box h1 {
+  font-size: 30px;
+}
+.quiz-starter-box button {
+  width: 50%;
+  border-radius: 10px;
+  height: 50px;
+  font-weight: 700;
+  background-color: royalblue;
+  color: #fff;
+  border: 0px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.quiz-starter-box button:hover {
+  background-color: rgb(56, 92, 200);
+}/*# sourceMappingURL=QuizStarter.css.map */
