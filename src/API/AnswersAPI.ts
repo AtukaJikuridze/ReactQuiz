@@ -54,8 +54,8 @@ export const AnswersAPI = [
   },
   {
     question: "how to get element type?",
-    answers: ["typeof()", "getType()", "typeof", "type"],
-    correctAnswer: "typeof",
+    answers: ["typeof()", "getType()", "(type) => {}", "type"],
+    correctAnswer: "typeof()",
   },
   {
     question:

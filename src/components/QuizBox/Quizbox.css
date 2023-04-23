@@ -3,6 +3,6 @@
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
-  height: 400px;
   position: relative;
+  transition: 0.4s;
 }/*# sourceMappingURL=Quizbox.css.map */

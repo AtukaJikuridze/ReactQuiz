@@ -1,19 +1,32 @@
-import { useState } from "react";
-import { AnswersAPI } from "../../API/AnswersAPI";
+import { useEffect, useState } from "react";
 import "./Quizbox.css";
 
 import QuizHeader from "./QuizHeader/QuizHeader";
-export default function Quizbox() {
-  const [answer, setAnswer] = useState<number | null>(null);
-  const [questionId, setQuestionId] = useState<number>(0);
-  const [correctAnswers, setCorrectAnswers] = useState<number>(0);
+interface QuizBox {
+  answer: number | null;
+  questionId: number;
+  setAnswer: any;
+  setCorrectAnswers: any;
+  setQuestionId: any;
+}
+export default function Quizbox({
+  answer,
+  questionId,
+  setAnswer,
+  setCorrectAnswers,
+  setQuestionId,
+}: QuizBox) {
+  useEffect(() => {
+    setAnimatedHeight(400);
+  }, []);
+
+  const [animatedHeight, setAnimatedHeight] = useState(0);
   return (
-    <div className="quiz-box">
+    <div className="quiz-box" style={{ height: animatedHeight + "px" }}>
       <QuizHeader
         answer={answer}
         questionId={questionId}
         setAnswer={setAnswer}
-        correctAnswers={correctAnswers}
         setCorrectAnswers={setCorrectAnswers}
         setQuestionId={setQuestionId}
       />
