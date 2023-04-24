@@ -5,9 +5,10 @@ import QuizHeader from "./QuizHeader/QuizHeader";
 interface QuizBox {
   answer: number | null;
   questionId: number;
-  setAnswer: any;
-  setCorrectAnswers: any;
-  setQuestionId: any;
+  setAnswer: Function;
+  setCorrectAnswers: Function;
+  setQuestionId: Function;
+  setIsFinished: Function;
 }
 export default function Quizbox({
   answer,
@@ -15,6 +16,7 @@ export default function Quizbox({
   setAnswer,
   setCorrectAnswers,
   setQuestionId,
+  setIsFinished,
 }: QuizBox) {
   useEffect(() => {
     setAnimatedHeight(400);
@@ -29,6 +31,7 @@ export default function Quizbox({
         setAnswer={setAnswer}
         setCorrectAnswers={setCorrectAnswers}
         setQuestionId={setQuestionId}
+        setIsFinished={setIsFinished}
       />
     </div>
   );

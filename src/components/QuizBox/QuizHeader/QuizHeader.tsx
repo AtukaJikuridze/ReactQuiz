@@ -5,9 +5,10 @@ import { useNavigate } from "react-router";
 interface quizHeader {
   answer: number | null;
   questionId: number;
-  setAnswer: any;
-  setCorrectAnswers: any;
-  setQuestionId: any;
+  setAnswer: Function;
+  setCorrectAnswers: Function;
+  setQuestionId: Function;
+  setIsFinished: Function;
 }
 
 export default function QuizHeader({
@@ -15,7 +16,7 @@ export default function QuizHeader({
   questionId,
   setAnswer,
   setQuestionId,
-
+  setIsFinished,
   setCorrectAnswers,
 }: quizHeader) {
   const [answerTimeout, setAnswerTimeout] = useState(false);
@@ -24,7 +25,6 @@ export default function QuizHeader({
   const answerColorize = (answer: string, correctAnswer: string) => {
     return answer === correctAnswer ? "correct" : "incorrect";
   };
-  console.log(answer);
 
   useEffect(() => {
     if (answer !== null) {
@@ -41,7 +41,8 @@ export default function QuizHeader({
         setCorrectAnswers((current: number) => current + 1);
       }
       if (questionId + 1 === AnswersAPI.length) {
-        navigate("/Results");
+        navigate("/ReactQuiz/Results");
+        setIsFinished(true);
       }
       setAnswer(null);
     }

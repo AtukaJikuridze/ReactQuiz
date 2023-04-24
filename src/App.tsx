@@ -9,16 +9,26 @@ function App() {
   const [answer, setAnswer] = useState<number | null>(null);
   const [questionId, setQuestionId] = useState<number>(0);
   const [correctAnswers, setCorrectAnswers] = useState<number>(0);
+  const [isFinished, setIsFinished] = useState<boolean>(false);
   return (
     <div>
-      {correctAnswers}
       <Routes>
-        <Route path="/">
-          <Route path="/" index element={<QuizStarter />} />
+        <Route path="/ReactQuiz">
           <Route
-            path="/inQuiz"
+            index
+            element={
+              <QuizStarter
+                setCorrectAnswers={setCorrectAnswers}
+                setQuestionId={setQuestionId}
+                setIsFinished={setIsFinished}
+              />
+            }
+          />
+          <Route
+            path="inQuiz"
             element={
               <Quizbox
+                setIsFinished={setIsFinished}
                 answer={answer}
                 questionId={questionId}
                 setAnswer={setAnswer}
@@ -28,8 +38,13 @@ function App() {
             }
           />
           <Route
-            path="/Results"
-            element={<QuizResults correctAnswers={correctAnswers} />}
+            path="Results"
+            element={
+              <QuizResults
+                correctAnswers={correctAnswers}
+                isFinished={isFinished}
+              />
+            }
           />
         </Route>
       </Routes>
