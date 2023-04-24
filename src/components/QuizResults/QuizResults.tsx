@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnswersAPI } from "../../API/AnswersAPI";
 import "./QuizResults.css";
-import { IoMdCheckboxOutline, IoMdCloseCircle } from "react-icons/io";
 import { useNavigate } from "react-router";
 import { analizeStatistic } from "../AnalizeStatistic";
 
