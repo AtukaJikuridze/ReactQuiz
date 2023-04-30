@@ -40,4 +40,10 @@
 }
 .quiz-results .quiz-statistic button:hover {
   background-color: rgb(50, 91, 213);
+}
+
+@media screen and (max-width: 590px) {
+  .quiz-results {
+    width: 100%;
+  }
 }/*# sourceMappingURL=QuizResults.css.map */

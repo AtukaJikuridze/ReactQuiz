@@ -10,9 +10,16 @@
 
 body {
   background: linear-gradient(90deg, rgb(184, 198, 197) 0%, rgb(168, 166, 163) 92%, rgb(161, 164, 158) 100%);
+  padding: 0px 30px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
+}
+
+@media screen and (max-width: 590px) {
+  #root {
+    width: 100%;
+  }
 }/*# sourceMappingURL=App.css.map */

@@ -29,4 +29,10 @@
 }
 .quiz-starter-box button:hover {
   background-color: rgb(56, 92, 200);
+}
+
+@media screen and (max-width: 590px) {
+  .quiz-starter-box {
+    width: 100%;
+  }
 }/*# sourceMappingURL=QuizStarter.css.map */

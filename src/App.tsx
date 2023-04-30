@@ -11,44 +11,42 @@ function App() {
   const [correctAnswers, setCorrectAnswers] = useState<number>(0);
   const [isFinished, setIsFinished] = useState<boolean>(false);
   return (
-    <div>
-      <Routes>
-        <Route path="/ReactQuiz">
-          <Route
-            index
-            element={
-              <QuizStarter
-                setCorrectAnswers={setCorrectAnswers}
-                setQuestionId={setQuestionId}
-                setIsFinished={setIsFinished}
-              />
-            }
-          />
-          <Route
-            path="inQuiz"
-            element={
-              <Quizbox
-                setIsFinished={setIsFinished}
-                answer={answer}
-                questionId={questionId}
-                setAnswer={setAnswer}
-                setCorrectAnswers={setCorrectAnswers}
-                setQuestionId={setQuestionId}
-              />
-            }
-          />
-          <Route
-            path="Results"
-            element={
-              <QuizResults
-                correctAnswers={correctAnswers}
-                isFinished={isFinished}
-              />
-            }
-          />
-        </Route>
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/ReactQuiz">
+        <Route
+          index
+          element={
+            <QuizStarter
+              setCorrectAnswers={setCorrectAnswers}
+              setQuestionId={setQuestionId}
+              setIsFinished={setIsFinished}
+            />
+          }
+        />
+        <Route
+          path="inQuiz"
+          element={
+            <Quizbox
+              setIsFinished={setIsFinished}
+              answer={answer}
+              questionId={questionId}
+              setAnswer={setAnswer}
+              setCorrectAnswers={setCorrectAnswers}
+              setQuestionId={setQuestionId}
+            />
+          }
+        />
+        <Route
+          path="Results"
+          element={
+            <QuizResults
+              correctAnswers={correctAnswers}
+              isFinished={isFinished}
+            />
+          }
+        />
+      </Route>
+    </Routes>
   );
 }
 

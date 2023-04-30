@@ -5,4 +5,23 @@
   overflow: hidden;
   position: relative;
   transition: 0.4s;
+}
+
+@media screen and (max-width: 590px) {
+  .quiz-box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .quiz-box {
+    height: unset !important;
+  }
+  .quiz-box .quiz-header .quiz-options {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+  .quiz-box .quiz-header .quiz-options .option {
+    width: 100%;
+  }
 }/*# sourceMappingURL=Quizbox.css.map */
